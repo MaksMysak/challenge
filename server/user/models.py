@@ -49,6 +49,7 @@ class User(AbstractBaseUser):
     is_superuser = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    wallet_address = models.CharField(max_length=64, blank=True, null=True)
 
     objects = UserManager()
 
