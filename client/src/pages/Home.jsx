@@ -52,7 +52,7 @@ export default function Home() {
                 <div className='row'>
                     <div className="mb-12">
                         { 
-                            !user?.first_name ? 'Please login first' : 
+                            user?.email !== undefined ? 'Please login first' : 
                             <div>
                                 <p>Hello {user.first_name}, your public key is {user.wallet_address}</p>
                                 <p>{balance ? `Your balance is ${balance}` :  "Loading..."}</p>
